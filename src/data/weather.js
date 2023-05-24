@@ -1,7 +1,7 @@
 const APIKEY = "3a194e67242bc4f3a1efdf0cabe02328";
 
 export async function getLocation(city) {
-    const URL_API = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKEY}`;
+    const URL_API = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${APIKEY}`;
     const getLocationAPI = await fetch(URL_API, {method: 'GET'});
     const coordenadas = await getLocationAPI.json();
     return coordenadas;

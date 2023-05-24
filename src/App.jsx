@@ -28,7 +28,7 @@ function App() {
       
       <h1><FaMapMarker/> {city}</h1>
 
-      <Weather weather={infoWeather} city={city} />
+      <Weather weather={infoWeather} />
     </main>
   );
 }

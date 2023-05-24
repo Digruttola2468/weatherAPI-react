@@ -1,6 +1,6 @@
 import "./weather.css";
 
-function Weather({ weather, city }) {
+function Weather({ weather }) {
   console.log(weather);
   if (weather.id == 0) {
     return <></>;
