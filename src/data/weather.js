@@ -14,3 +14,12 @@ export async function getWeather(lon,lat) {
     const getTiempJson = await getTiemp.json();
     return getTiempJson;
 }
+
+export async function getForecast(lon,lat) {
+    const URL_API = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKEY}&units=metric&lat=${lat}&lon=${lon}&cnt=10`;
+
+    const getForecast = await fetch(URL_API, {method: 'GET'});
+    const getForecastJSON = await getForecast.json();
+    const getListForecast = getForecastJSON.list;
+    return getListForecast;
+}

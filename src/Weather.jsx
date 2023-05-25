@@ -1,12 +1,17 @@
 import "./weather.css";
 
+function setFavicons(favImg){
+  let headTitle = document.querySelector('head');
+  let setFavicon = document.createElement('link');
+  setFavicon.setAttribute('rel','shortcut icon');
+  setFavicon.setAttribute('href',favImg);
+  headTitle.appendChild(setFavicon);
+}
+
+
 function Weather({ weather }) {
-  console.log(weather);
-  if (weather.id == 0) {
-    return <></>;
-  }
   let image = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
-  console.log(image);
+  setFavicons(image);
   return (
     <section className="section-today">
       <div className="container-weather">
