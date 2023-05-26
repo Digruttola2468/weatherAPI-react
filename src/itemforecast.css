@@ -1,0 +1,31 @@
+.itemForecast-container {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    align-items: center;
+    margin-top: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.itemForecast-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.infoForecast {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.infoForecast p {
+    font-weight: 600;
+    color: rgb(124, 124, 124);
+}
+
+.tempForecast {
+    font-size: 50px;
+    font-weight: 700;
+}
